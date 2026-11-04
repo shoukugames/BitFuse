@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BitFuse
+Name[ja]=ビットフューズ
+GenericName=Binary Number Puzzle
+GenericName[ja]=2進数パズル
+Comment=Learn binary numbers by flicking switches and lighting fireworks (ages 10+)
+Comment[ja]=スイッチを切りかえて花火を打ち上げ、2進数を学ぼう（10才以上）
+Exec=bitfuse
+Icon=bitfuse
+Terminal=false
+Categories=Game;LogicGame;Education;Math;
+Keywords=binary;math;switch;fireworks;puzzle;kids;computer;
