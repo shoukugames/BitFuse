@@ -59,6 +59,21 @@ highest level reached on each difficulty, a chart of solve times, and every
 attempt with its date, difficulty, level, number, result, time taken, wrong
 answers and score. Records can be reset there.
 
+## Play in the browser
+
+BitFuse also runs in a web browser, on computers, phones and tablets, with nothing to install:
+<https://shoukugames.org/play/bitfuse/> (test page). Tap the switches to flick them and tap
+Ignite. Settings, scores and progress are saved in the browser.
+
+```bash
+python3 -m pip install pygame pygbag     # plus ffmpeg on PATH (or FFMPEG=/path/to/ffmpeg)
+python3 tools/build_web.py               # -> build/web/: upload the folder as-is
+```
+
+The build uses [pygbag](https://pygame-web.github.io/), which also converts the sounds to OGG.
+`main.py` is the web entry point; the browser-only parts switch on only in the browser.
+The `.apk` file pygbag writes is its bundle of game files, not an Android app.
+
 ## Install
 
 - **Windows:** run `BitFuse-v0.1.0.exe`. It is a single file and needs no

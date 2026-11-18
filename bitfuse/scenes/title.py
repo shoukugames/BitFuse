@@ -3,7 +3,7 @@ import math
 
 import pygame
 
-from .. import __version__, art, i18n, storage
+from .. import WEB, __version__, art, i18n, storage
 from ..app import H, W, Scene
 from ..levels import DIFFICULTIES
 from ..ui import Button, ButtonGroup
@@ -26,8 +26,9 @@ class TitleScene(Scene):
             Button((x, 328, w, 58), lambda: i18n.t("intro"), self.intro, color=(52, 96, 190), size=24),
             Button((x, 400, w, 58), lambda: i18n.t("parents"), self.parents, color=(110, 70, 170), size=24),
             Button((x, 472, w, 58), lambda: i18n.t("credits"), self.credits, color=(40, 120, 150), size=24),
+        ] + ([] if WEB else [  # a web page has nothing to quit to
             Button((x, 544, w, 58), lambda: i18n.t("quit"), self.quit, color=(90, 96, 130), size=22),
-        ])
+        ]))
         px = 440
         self.diff_buttons = {}
         for i, d in enumerate(DIFFICULTIES):
@@ -108,7 +109,7 @@ class TitleScene(Scene):
             if event.key in (pygame.K_RETURN, pygame.K_KP_ENTER):
                 self.play()
                 return
-            if event.key == pygame.K_ESCAPE:
+            if event.key == pygame.K_ESCAPE and not WEB:
                 self.quit()
                 return
         self.buttons.handle(event, self.app.audio)
