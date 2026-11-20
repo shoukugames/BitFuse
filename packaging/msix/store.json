@@ -1,0 +1,12 @@
+{
+ "_note": "Replace identity_name, publisher and publisher_display_name with the values from Partner Center (Product management -> Product identity) before uploading to the Microsoft Store.",
+ "identity_name": "ShoukuGames.BitFuse",
+ "publisher": "CN=ShoukuGamesPlaceholder",
+ "publisher_display_name": "Shouku Games",
+ "display_name": "BitFuse",
+ "description": "A binary puzzle game with switches instead of digits. Flick the switches to make the number in binary, then light the fuse and launch the fireworks.",
+ "file_name": "BitFuse",
+ "exe_name": "BitFuse.exe",
+ "alias": "shouku-bitfuse.exe",
+ "device_capabilities": []
+}
